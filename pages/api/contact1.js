@@ -10,16 +10,17 @@ export default function handler(req, res) {
     ) {
       res.status(561).json({ error: "Failed to send message" });
     } else {
-//       require("dotenv").config();
+      //       require("dotenv").config();
 
       const nodemailer = require("nodemailer");
+      const passwordG = process.env.NEXT_PUBLIC_PASSWORD;
 
       const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
           user: "rohith18151821@gmail.com",
-          pass: process.env.NEXT_PUBLIC_PASSWORD
-        }
+          pass: passwordG,
+        },
       });
 
       const mailOptions = {
@@ -31,7 +32,7 @@ export default function handler(req, res) {
   <div>
   ${req.body.message}
   </div>
-  `
+  `,
       };
 
       transporter.sendMail(mailOptions, function (error, info) {
