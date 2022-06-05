@@ -13,7 +13,7 @@ export default function handler(req, res) {
     ) {
       res.status(561).json({ error: "Failed to send message" });
     } else {
-      //       require("dotenv").config();
+            require("dotenv").config();
 
       const nodemailer = require("nodemailer");
       const passwordG = process.env.NEXT_PUBLIC_PASSWORD;
@@ -22,7 +22,7 @@ export default function handler(req, res) {
         service: "gmail",
         auth: {
           user: "rohith18151821@gmail.com",
-          pass: process.env.NEXT_PUBLIC_PASSWORD,
+          pass: process.env.PASSWORD,
         },
       });
 
