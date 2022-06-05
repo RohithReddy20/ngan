@@ -22,7 +22,7 @@ export default function handler(req, res) {
         service: "gmail",
         auth: {
           user: "rohith18151821@gmail.com",
-          pass: trfenaqflangzbey,
+          pass: process.env.NEXT_PUBLIC_PASSWORD,
         },
       });
 
