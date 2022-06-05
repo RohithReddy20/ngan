@@ -10,7 +10,7 @@ export default function handler(req, res) {
     ) {
       res.status(561).json({ error: "Failed to send message" });
     } else {
-      require("dotenv").config();
+//       require("dotenv").config();
 
       const nodemailer = require("nodemailer");
 
