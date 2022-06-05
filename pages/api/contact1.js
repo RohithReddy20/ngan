@@ -33,7 +33,6 @@ export default function handler(req, res) {
   </div>
   `
       };
-//       nganle.130516@gmail.com
 
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
