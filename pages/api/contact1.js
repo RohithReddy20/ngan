@@ -24,7 +24,7 @@ export default function handler(req, res) {
 
       const mailOptions = {
         from: "rohith18151821@gmail.com",
-        to: "nganle.130516@gmail.com",
+        to: "19105008rohith@gmail.com",
         subject: `${req.body.subject}, Message from  ${req.body.firstName} ${req.body.lastName}`,
         html: `
     <div style="display:flex"><span>From: <h3>${req.body.email}</h3></span></div>
@@ -33,6 +33,7 @@ export default function handler(req, res) {
   </div>
   `
       };
+//       nganle.130516@gmail.com
 
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
